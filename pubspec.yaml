@@ -9,6 +9,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  fluttertoast: ^9.0.0
+  http: ^1.5.0
 
 dev_dependencies:
   flutter_test:

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'classes/example.dart';
 
 // Flutter - framework for multiplatform development (including mobile)
 // language? - Dart
@@ -25,7 +26,7 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Scaffold(body: Center(child: Text('Hello World!'))),
+      home: StatelessExampleWidget(),
     );
   }
 }
