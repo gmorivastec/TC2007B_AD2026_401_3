@@ -53,6 +53,7 @@ Future<List<Car>> getCars() async {
       cars.add(currentCar);
     } 
 
+    print("REQUEST DONE");
     return cars;
   } else {
     throw Exception("REQUEST HAD ERRORS: ${response.statusCode}");
@@ -92,6 +93,7 @@ class _RequestDetailWidgetState extends State<RequestDetailWidget> {
               // required: return a widget
               if(snapshot.hasData) {
 
+                print("HAS DATA");
                 List<Widget> children = [];
 
                 if(snapshot.data != null) {
@@ -101,14 +103,15 @@ class _RequestDetailWidgetState extends State<RequestDetailWidget> {
                   }
                 }
 
+                return Column(children: children);
+
               } else if(snapshot.hasError) {
 
                 return Text("${snapshot.error}");
               } 
-              else
-              {
-                return const CircularProgressIndicator();
-              }
+                
+              return const CircularProgressIndicator();
+              
                 
             }
           )
