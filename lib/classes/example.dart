@@ -3,6 +3,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'request.dart';
 
 
 // 2 types of widgets to explore:
@@ -90,7 +91,8 @@ class _StatefulWidgetExampleState extends State<StatefulWidgetExample> {
             // navigate
             Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => DetailViewWidget(externalArg: value,))
+                //MaterialPageRoute(builder: (context) => DetailViewWidget(externalArg: value,))
+                MaterialPageRoute(builder: (context) => RequestDetailWidget())
             );
         },
     );
